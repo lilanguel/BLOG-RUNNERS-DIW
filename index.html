@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Eventos Running</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 text-secondary me-md-auto text-decoration-none">
+                <img src="img/logo runners.svg" alt="logo_runners" height="100px">
+                <h1 class="fs-4 text-start">Runners</h1>
+            </a>
+        </header>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario:</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
+                                <input type="text" class="form-control" id="usuario">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña:</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-safe"></i></span>
+                                <input type="password" class="form-control" id="password">
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="mantenerSesion">
+                            <label class="form-check-label" for="mantenerSesion">Mantener sesión abierta</label>
+                        </div>
+                        <a href="#" class="link-primary">Resetear contraseña</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark" aria-label="Third navbar example">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+                    <li class="nav-item">
+                        <button type="button" class="btn nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Login
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="registro.html">Registro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Entradas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Crear nueva entrada <i
+                                class="bi bi-sign-intersection-fill"></i> </a>
+                    </li>
+                </ul>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="lightSwitch"> Dark Mode </label>
+                    <input class="form-check-input" type="checkbox" id="lightSwitch" />
+                </div>
+                <div class="collapse" id="collapseSearch">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Search"
+                        aria-describedby="basic-addon1">
+                </div>
+                <button type="button" class="btn btn-secondary" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch"><i
+                        class="bi bi-search text-light"></i></button>
+            </div>
+        </div>
+    </nav>
+    <hr>
+    <div class="row">
+        <div class="col-md-8">
+            <main>
+                <div class="row pt-3">
+                    <nav class="col" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb px-3">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item" aria-current="page">Entradas</li>
+                        </ol>
+                    </nav>
+                    <nav aria-label="Page navigation example" class="col">
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="album py-5 bg-light">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                            <div class="col">
+                                <div class="card shadow-sm bg-dark">
+                                    <img src="img/athlete-1840437_1920.jpg" alt="articulo1" class="rounded img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-text">Carrera de Relevos</h5>
+                                        <div>
+                                            Profesional
+                                        </div>
+                                        <div class="border-top">
+                                            #relevos, #participantes, #palo, #botines, #carrera
+                                        </div>
+                                        <div class="border-top">
+                                            La carrera de relevos de Sevilla 2023 (España) ya está confirmada y
+                                            tendrá lugar el 26 de febrero de 2023. Con el nombre legal de Maratón
+                                            Internacional Ciudad de...
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-up-fill"></i> 2k</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-down-fill"></i> 234</button>
+                                            </div>
+                                            <small>
+                                                <i class="bi bi-chat-square-dots-fill"></i> 23
+                                                <i class="bi bi-eye-fill"></i> 13k
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm bg-dark">
+                                    <img src="img/jogging-2343558_1920.jpg" alt="articulo2" class="rounded img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-text">Maratón carretera A-49</h5>
+                                        <div>
+                                            Senior
+                                        </div>
+                                        <div class="border-top">
+                                            #longitud, #carretera, #cansancio, #natacion, #agua
+                                        </div>
+                                        <div class="border-top">
+                                            La maratón anual por la A-49 es un evento impresionante que atrae a
+                                            cientos de corredores de todo el mundo a la hermosa ciudad eslovaca. La
+                                            maratón también tiene…
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-up-fill"></i> 700</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-down-fill"></i> 12</button>
+                                            </div>
+                                            <small>
+                                                <i class="bi bi-chat-square-dots-fill"></i> 45
+                                                <i class="bi bi-eye-fill"></i> 1.2k
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm bg-dark">
+                                    <img src="img/runner-1863202_1920.jpg" alt="articulo3" class="rounded img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-text">Paseo por el Río Tinto</h5>
+                                        <div>
+                                            Junior
+                                        </div>
+                                        <div class="border-top">
+                                            #rio, #paseo, #agradable, #minas, #infantil
+                                        </div>
+                                        <div class="border-top">
+                                            Después de mucho tiempo sin celebrar eventos infantiles en la ciudad, la
+                                            visita al Río Tinto acoge a todas las familias y
+                                            vuelve con toda la ilusión de ver nuevamente...
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-up-fill"></i> 1.2k</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-down-fill"></i> 56</button>
+                                            </div>
+                                            <small>
+                                                <i class="bi bi-chat-square-dots-fill"></i> 134
+                                                <i class="bi bi-eye-fill"></i> 3k
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm bg-dark">
+                                    <img src="img/desert-2806435_1920.jpg" alt="articulo4" class="rounded img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-text">Paseo por el desierto</h5>
+                                        <div>
+                                            Senior
+                                        </div>
+                                        <div class="border-top">
+                                            #desierto, #paseo, #agua, #sed, #sudor, #lagrimas
+                                        </div>
+                                        <div class="border-top">
+                                            Si hay un evento que destaque entre todos, ese es el paseo por el desierto
+                                            de Almería. Es wl más bonito y es el que se apunta más gente. Cada vez va
+                                            ganando más popularidad...
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-up-fill"></i> 15k</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-down-fill"></i> 3k</button>
+                                            </div>
+                                            <small>
+                                                <i class="bi bi-chat-square-dots-fill"></i> 1.5k
+                                                <i class="bi bi-eye-fill"></i> 24k
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm bg-dark">
+                                    <img src="img/man-1838991_1920.jpg" alt="articulo5" class="rounded img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-text">Running por Málaga</h5>
+                                        <div>
+                                            Senior
+                                        </div>
+                                        <div class="border-top">
+                                            #footing, #andalucia, #aguante, #ciudad, #calles
+                                        </div>
+                                        <div class="border-top">
+                                            La maratón de Málaga es el principal evento de este tipo en
+                                            Andalucía. Se disputa desde 1982 y recorre todas las calles de la preciosa
+                                            ciudad de
+                                            Málaga...
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-up-fill"></i> 10k</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-down-fill"></i> 1k</button>
+                                            </div>
+                                            <small>
+                                                <i class="bi bi-chat-square-dots-fill"></i> 5.1k
+                                                <i class="bi bi-eye-fill"></i> 19.8k
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm bg-dark">
+                                    <img src="img/woman-4127336_1920.jpg" alt="articulo6" class="rounded img-fluid">
+                                    <div class="card-body">
+                                        <h5 class="card-text">Triatlón Huelva</h5>
+                                        <div>
+                                            Senior
+                                        </div>
+                                        <div class="border-top">
+                                            #carrera, #bicicleta, #agua, #natacion, #running
+                                        </div>
+                                        <div class="border-top">
+                                            Deporte que implica la realización de 3 disciplinas deportivas, natación,
+                                            ciclismo y carrera a pie, que se realizan en orden y sin interrupción entre
+                                            una prueba y la siguiente.
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mt-4">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-up-fill"></i> 345</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                        class="bi bi-hand-thumbs-down-fill"></i> 34</button>
+                                            </div>
+                                            <small>
+                                                <i class="bi bi-chat-square-dots-fill"></i> 45
+                                                <i class="bi bi-eye-fill"></i> 1k
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="col-md-4 pt-3 bg-light">
+            <div class="card bg-dark">
+                <img src="img/banner promocion.png" alt="banner_promocion" class="rounded img-fluid">
+                <div class="card-body text-center"">
+                    <h5 class=" card-title">¡Síguenos en nuestras redes sociales!</h5>
+                    <p class="card-text">
+                        <a href="https://www.instagram.com/"><img src="img/Instagram_logo_2016.svg.webp" width="40px"
+                                class="img-fluid" alt="logo_instagram"></a>
+                        <a href="https://es-es.facebook.com/"><img src="img/Facebook_f_logo_(2019).svg.webp"
+                                width="40px" class="img-fluid" alt="logo_facebook"></a>
+                        <a href="https://www.youtube.com/"><img src="img/Youtube_logo.png" width="40px"
+                                class="img-fluid" alt="logo_youtube"></a>
+                    </p>
+                </div>
+            </div>
+            <div id="carouselExample" class="carousel slide pt-5">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/athlete-1840437_1920.jpg" class="d-block w-100" alt="Img1_carousel">
+                        <div class="carousel-caption d-none d-md-block text-truncate">
+                            <h5>Carrera de Relevos en Sevilla</h5>
+                            <p>¡Corre con tus amigos para ser el mejor!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/runner-1863202_1920.jpg" class="d-block w-100" alt="Img2_carousel">
+                        <div class="carousel-caption d-none d-md-block text-truncate">
+                            <h5>Paseo por Minas del Río Tinto</h5>
+                            <p>Ruta guiada por las minas incluida</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/jogging-2343558_1920.jpg" class="d-block w-100" alt="Img3_carousel">
+                        <div class="carousel-caption d-none d-md-block text-truncate">
+                            <h5>Maratón carretera A-49</h5>
+                            <p>Forrest Gump también viene</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <footer>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                <div class="col mb-3">
+                    <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                        <img src="img/logo runners.svg" alt="logo_runners" height="100px">
+                    </a>
+                </div>
+                <div class="col mb-3">
+                    <h5>Dirección</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Calle Mamerto N6, Sevilla,
+                                España</a></li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Secciones principales</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Login</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Registro</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Entradas</a></li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Etiquetas relacionadas</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Eventos</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Corredores</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Carreras</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Rutas</a></li>
+                    </ul>
+                </div>
+                <div class="col mb-3">
+                    <h5>Categorías</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Senior</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Junior</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Profesional</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top">
+                <div class="col mb-3">
+                    <h5>Derechos de autor</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Copyright <i
+                                    class="bi bi-c-circle"></i> 2022
+                                RUNNING.es RPM Racing</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Política de privacidad</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Aviso legal</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Política de
+                                Cookies</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contactar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div id="contenedorVideo">
+        <video controls autoplay muted loop id="myVideo">
+            <source src="vid/video runners.mp4" type="video/mp4">
+        </video>
+        <div class="content">
+            <button id="botonCerrar" onclick="closeVideo()" type="button"><i class="bi bi-x-circle"></i></button>
+            <p>RUNNERS</p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/switch.js"></script>
+</body>
+
+</html>
