@@ -18,6 +18,14 @@
             element.className = element.className.replace(/-light/g, '-dark');
         });
 
+        document.querySelectorAll('.text-muted').forEach((element) => {
+            element.className = element.className.replace(/-muted/g, '-light');
+        });
+
+        document.querySelectorAll('.text-grey').forEach((element) => {
+            element.className = element.className.replace(/-grey/g, '-light');
+        });
+
         document.body.classList.add('bg-dark');
 
         if (document.body.classList.contains('text-dark')) {
@@ -47,6 +55,10 @@
     function lightMode() {
         document.querySelectorAll('.bg-dark').forEach((element) => {
             element.className = element.className.replace(/-dark/g, '-light');
+        });
+
+        document.querySelectorAll('.text-light').forEach((element) => {
+            element.className = element.className.replace(/-light/g, '-muted');
         });
 
         document.body.classList.add('bg-light');
