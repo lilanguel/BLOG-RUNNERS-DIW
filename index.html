@@ -27,20 +27,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Login</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="usuario" class="form-label">Usuario:</label>
+                            <label for="usuario" class="form-label text-dark">Usuario:</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
                                 <input type="text" class="form-control" id="usuario">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña:</label>
+                            <label for="password" class="form-label text-dark">Contraseña:</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-safe"></i></span>
                                 <input type="password" class="form-control" id="password">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="mantenerSesion">
-                            <label class="form-check-label" for="mantenerSesion">Mantener sesión abierta</label>
+                            <label class="form-check-label text-dark" for="mantenerSesion">Mantener sesión abierta</label>
                         </div>
                         <a href="#" class="link-primary">Resetear contraseña</a>
                     </div>
@@ -92,8 +92,8 @@
                     <input class="form-check-input" type="checkbox" id="lightSwitch" />
                 </div>
                 <div class="collapse" id="collapseSearch">
-                    <input type="text" class="form-control" aria-label="Búsqueda" placeholder="Buscar..."
-                        aria-label="Search">
+                    <input type="text" id="entrada_busqueda" class="form-control" placeholder="Buscar..."
+                        aria-label="Busqueda">
                 </div>
                 <button type="button" class="btn btn-secondary" data-bs-toggle="collapse"
                     data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch"><i
@@ -151,9 +151,9 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-4">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-primary"><i
                                                         class="bi bi-hand-thumbs-up-fill"></i> 2k</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger"><i
                                                         class="bi bi-hand-thumbs-down-fill"></i> 234</button>
                                             </div>
                                             <small>
@@ -182,9 +182,9 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-4">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-primary"><i
                                                         class="bi bi-hand-thumbs-up-fill"></i> 700</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger"><i
                                                         class="bi bi-hand-thumbs-down-fill"></i> 12</button>
                                             </div>
                                             <small>
@@ -213,9 +213,9 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-4">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-primary"><i
                                                         class="bi bi-hand-thumbs-up-fill"></i> 1.2k</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger"><i
                                                         class="bi bi-hand-thumbs-down-fill"></i> 56</button>
                                             </div>
                                             <small>
@@ -244,9 +244,9 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-4">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-primary"><i
                                                         class="bi bi-hand-thumbs-up-fill"></i> 15k</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger"><i
                                                         class="bi bi-hand-thumbs-down-fill"></i> 3k</button>
                                             </div>
                                             <small>
@@ -276,9 +276,9 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-4">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-primary"><i
                                                         class="bi bi-hand-thumbs-up-fill"></i> 10k</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger"><i
                                                         class="bi bi-hand-thumbs-down-fill"></i> 1k</button>
                                             </div>
                                             <small>
@@ -307,9 +307,9 @@
                                         </div>
                                         <div class="d-flex justify-content-between align-items-center mt-4">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-primary"><i
                                                         class="bi bi-hand-thumbs-up-fill"></i> 345</button>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary"><i
+                                                <button type="button" class="btn btn-sm btn-outline-danger"><i
                                                         class="bi bi-hand-thumbs-down-fill"></i> 34</button>
                                             </div>
                                             <small>

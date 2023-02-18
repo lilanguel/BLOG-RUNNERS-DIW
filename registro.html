@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-secondary text-decoration-none">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-light text-decoration-none">
                 <img src="img/logo_runners.svg" alt="logo_runners" height="100px">
                 <h1 class="fs-4">Runners</h1>
             </a>
@@ -25,20 +25,20 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+                    <h1 class="modal-title fs-5 text-dark" id="staticBackdropLabel">Login</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <form>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="usuario" class="form-label">Usuario:</label>
+                            <label for="usuario" class="form-label text-dark">Usuario:</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-person-circle"></i></span>
                                 <input type="text" class="form-control" id="usuario">
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña:</label>
+                            <label for="password" class="form-label text-dark">Contraseña:</label>
                             <div class="input-group">
                                 <span class="input-group-text"><i class="bi bi-safe"></i></span>
                                 <input type="password" class="form-control" id="password">
@@ -46,7 +46,8 @@
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="mantenerSesion">
-                            <label class="form-check-label" for="mantenerSesion">Mantener sesión abierta</label>
+                            <label class="form-check-label text-dark" for="mantenerSesion">Mantener sesión
+                                abierta</label>
                         </div>
                         <a href="#" class="link-primary">Resetear contraseña</a>
                     </div>
@@ -69,19 +70,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                     <li class="nav-item">
-                        <button type="button" class="btn nav-link" data-bs-toggle="modal"
+                        <button type="button" class="btn nav-link text-light" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop">
                             Login
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Registro</a>
+                        <a class="nav-link text-light" aria-current="page" href="#">Registro</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Entradas</a>
+                        <a class="nav-link text-light" aria-current="page" href="index.html">Entradas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Crear nueva entrada <i
+                        <a class="nav-link text-light" aria-current="page" href="#">Crear nueva entrada <i
                                 class="bi bi-sign-intersection-fill"></i> </a>
                     </li>
                 </ul>
@@ -90,7 +91,8 @@
                     <input class="form-check-input" type="checkbox" id="lightSwitch" />
                 </div>
                 <div class="collapse" id="collapseSearch">
-                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Search">
+                    <input type="text" id="entrada_busqueda" class="form-control" placeholder="Buscar..."
+                        aria-label="Busqueda">
                 </div>
                 <button type="button" class="btn btn-secondary" data-bs-toggle="collapse"
                     data-bs-target="#collapseSearch" aria-expanded="false" aria-controls="collapseSearch"><i
@@ -104,7 +106,7 @@
             <main class="p-3">
                 <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item">Home</li>
                         <li class="breadcrumb-item" aria-current="page">Registro</li>
                     </ol>
                 </nav>
@@ -207,10 +209,10 @@
                     <p class="card-text">
                         <a href="https://www.instagram.com/"><img src="img/Instagram_logo_2016.svg.webp" width="40"
                                 class="img-fluid" alt="logo_instagram"></a>
-                        <a href="https://es-es.facebook.com/"><img src="img/Facebook_f_logo_(2019).svg.webp"
-                                width="40" class="img-fluid" alt="logo_facebook"></a>
-                        <a href="https://www.youtube.com/"><img src="img/Youtube_logo.png" width="40"
-                                class="img-fluid" alt="logo_youtube"></a>
+                        <a href="https://es-es.facebook.com/"><img src="img/Facebook_f_logo_(2019).svg.webp" width="40"
+                                class="img-fluid" alt="logo_facebook"></a>
+                        <a href="https://www.youtube.com/"><img src="img/Youtube_logo.png" width="40" class="img-fluid"
+                                alt="logo_youtube"></a>
                     </p>
                 </div>
             </div>
@@ -262,34 +264,34 @@
                 <div class="col mb-3">
                     <h5>Dirección</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Calle Mamerto N6, Sevilla,
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Calle Mamerto N6, Sevilla,
                                 España</a></li>
                     </ul>
                 </div>
                 <div class="col mb-3">
                     <h5>Secciones principales</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Login</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Registro</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Entradas</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Login</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Registro</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Entradas</a></li>
                     </ul>
                 </div>
                 <div class="col mb-3">
                     <h5>Etiquetas relacionadas</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Eventos</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Corredores</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Carreras</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Rutas</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Eventos</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Corredores</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Carreras</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Rutas</a></li>
                     </ul>
                 </div>
                 <div class="col mb-3">
                     <h5>Categorías</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Senior</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Junior</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Profesional</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Senior</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Junior</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Profesional</a></li>
                     </ul>
                 </div>
             </div>
@@ -297,15 +299,15 @@
                 <div class="col mb-3">
                     <h5>Derechos de autor</h5>
                     <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Copyright <i
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Copyright <i
                                     class="bi bi-c-circle"></i> 2022
                                 RUNNING.es RPM Racing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Política de privacidad</a>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Política de privacidad</a>
                         </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Aviso legal</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Política de
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Aviso legal</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Política de
                                 Cookies</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0">Contactar</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contactar</a></li>
                     </ul>
                 </div>
             </div>
